@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*font*/
+@font-face{
+	font-family:nanum;
+	src:local('NanumGothic'),
+		url("../font/NanumGothic.eot"),
+		url("../font/NanumGothic.woff") format('woff'),
+		url("../font/NanumGothic.ttf") format('truetype');
+}
+
+/*reset*/
+*{box-sizing: border-box}
+ul,li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+body{font: normal 14px/1.5em "nanum"; background-color: #fff; color: #222;}
+
+/*wrap*/
+#wrap{width: 100%; height: auto;}
+
+/*container*/
+#container{width: 100%; height: auto; float: left; margin-left: 142px;} /*height 임시*/

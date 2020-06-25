@@ -1,63 +1,20 @@
 @charset "utf-8";
-
-/*font*/
-@font-face{
-	font-family:nanum;
-	src:local('NanumGothic'),
-		url("../font/NanumGothic.eot"),
-		url("../font/NanumGothic.woff") format('woff'),
-		url("../font/NanumGothic.ttf") format('truetype');
-}
-
-/*reset*/
-*{box-sizing: border-box}
-ul,li{list-style: none;}
-a{text-decoration: none; color: inherit;}
-body{font: normal 16px/1.5em "nanum"; background-color: #fff; color: #222;}
-
-/*wrap*/
-#wrap{width: 100%; height: auto;}
-
-/*left_wrap*/
-#left_wrap{width: 180px; height: 100%; float: left; position: fixed; border-right: 1px solid #eaeaea;}
-
-/*logo*/
-.logo{width: 69px; height: 50px; margin-top: 30px; margin-left: 30px;}
-.logo img{width: 90px;}
-.logo a{display: block;}
-
-/*gnb*/
-.category{width: 180px; height: 30px; line-height: 30px; margin-top: 70px; padding-left: 30px; font-weight: bold;}
-#gnb{width: 180px; /*overflow: scroll;*/}
-#main_gnb{width: 160px; padding-left: 30px; margin-top: 50px; font-weight: bold; line-height: 40px;}
-#sub_gnb{width: 160px; padding-left: 30px; margin-top: 70px; line-height: 40px; font-weight: normal;}
-.category a:hover{color: #3bded4; text-decoration: underline;}
-#gnb li a:hover{color: #3bded4; text-decoration: underline;}
-#sub_gnb li a:hover{color: #3bded4; text-decoration: underline;}
-
-/*container*/
-#container{width: 100%; height: auto; float: left; margin-left: 180px;} /*height 임시*/
-
-/*top*/
-#top{width: 100%; height: 90px; min-width: 1000px; padding-top: 25px; margin-left: 30px;} /*min-width 설정해노면 줄여도 줄안바뀜*/
-#search{width: 300px; height: 40px;float: left; border-radius: 30px;}
-#submit{width: 30px; height: 30px; border: none; position: relative; top: 5px; right: 45px; background: #fff url("../images/common/search.png") no-repeat center center;}                
-
-/*icon*/
-#icon{width: 210px; float: right; margin-right: 230px; margin-top: 5px;} /*margin-right 왜이러지*/
-#icon p{float: left; margin-left: 40px;}
+@import url("00_common.css");
+@import url("00_gnb.css");
+@import url("00_top.css");
+@import url("00_bottom.css");
 
 /*slide*/
-#slide_wrap{width: 100%; height: 360px; position: relative; margin-bottom: 5px; min-width: 1300px;}
-#slide1>img{width: 1000px; height: 360px; margin-right: 180px; margin-left: -1000px; float: right; } /*margin left 마이너스로*/
-#bluebox{width: 50%; height: 360px; float: left; background-color: #9CDAF1;}
+#slide_wrap{width: 100%; height: 360px; position: relative; margin-bottom: 5px; min-width: 1300px;}/*padding-right : 60px*/
+#slide1>img{width: 1000px; height: 360px; margin-right: 130px; margin-left: -1000px; float: right; } /*margin left 마이너스로*/ /*margin-right 왜저러지*/
+#bluebox{width: 80%; height: 360px; float: left; background-color: #9CDAF1;}
 .slide1_txt{position: absolute; top: 100px; left: 70px;}
 .slide1_txt h3{font-size: 35px; line-height: 45px; font-weight: normal;}
 .slide1_txt p{margin-top: 10px; line-height: 20px; font-size: 12px;}
 .slide1_txt img{margin-top: 20px;}
 
 /*slide button*/
-#slide_button{width: 200px; margin-left: 20px;}
+#slide_button{width: 200px; margin-left: 30px;}
 #slide_circle{width: 120px; height: 40px; float: left;}
 #slide_circle div{width: 20px; height: 20px; float: left; margin: 8px 5px; border-radius: 20px; background-color: #eaeaea;}
 .left_button{float: left;}
@@ -65,15 +22,15 @@ body{font: normal 16px/1.5em "nanum"; background-color: #fff; color: #222;}
 #slide_circle div.selected{background-color: #3bded4;}
 
 /*item*/
-#contents{width: 100%; min-width: 1350px; overflow: auto; margin-top: 100px; clear: both; margin-left: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
+#contents{width: 100%; height: auto; overflow: auto; min-width: 1350px; margin-top: 100px; margin-left: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
 .item{width: 21%; float: left; margin-right: 20px; margin-bottom: 80px;}
-.item img{width: 100%;}
-.item p strong{width: 100%; height: 68px; display: block; font-size: 18px; color: #222; line-height: 30px; margin-top: 20px;}
+.item img{width: 100%; margin-right: 20px;}
+.item p strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
 .item p span{display: block; font-weight: normal; color: #222; line-height: 22px;}
 /*#contents img:hover{width: 105%; transition:all 0.6s;}*/
 
 /*banner*/
-#banner_wrap{width: 100%; margin-top: 40px; background-color: #E6E3DE;}
+#banner_wrap{width: 100%; margin-top: 40px; background-color: #E6E3DE; position: relative;}
 .banner{width: 1120px; margin: 0 auto; display: block;}
 
 /*hotdeal*/
@@ -83,34 +40,3 @@ body{font: normal 16px/1.5em "nanum"; background-color: #fff; color: #222;}
 .hotdeal_item{float: left; width: 16.5%; margin-right: 20px;}
 .hotdeal_item img{width: 100%;}
 .hotdeal_item p strong{display: block; font-size: 20px; margin-bottom: 5px;}
-
-/*bottom*/
-#bottom_wrap{border-top: 1px solid #000; width: 100%; height: 330px; min-width: 1300px; padding-left: 30px;}
-#bottom section{float: left; margin-top: 40px;}
-#bottom_left{width: 45%; height: 253px; float: left;} /*width 아닌거같음*/
-#bottom_gnb{line-height: 35px;}
-
-#bottom_center{width: 362px; height: 290px; vertical-align: top; display: inline-block; float: right;}
-#call{margin-bottom: 30px;}
-#call p{ display: block; font-size: 12px; font-weight: bold; line-height: 25px; text-decoration: underline; margin-bottom: 10px;}
-#call span{font-size: 30px;}
-#bottom_center dl{font-size: 12px; color: #808080;}
-#bottom_center dt{float: left; width: 100px;}
-#bottom_center h5{font-weight: normal; font-size: 12px;}
-
-#bottom_right{width: 362px; height: 299px; font-size: 12px; margin-left: 80px; display: inline-block; vertical-align: top; float: right;}
-#bottom_right h3{font-weight: normal; margin-bottom: 10px;}
-#bottom_right p{margin-bottom: 10px; color: #808080;}
-#bottom_right h2{font-weight: normal;}
-#bottom_right div{margin:10px 0;}
-#bottom_right dl{color: #808080;}
-#bottom_right dt{width: 80px;float: left;}
-#footer{width: 88%; border-top: 1px solid #eaeaea; padding-top: 30px; color: #b2b2b2; font-size: 12px; margin-bottom: 50px;}
-
-/*button*/
-.button{position: fixed; bottom: 20px; right: 20px;}
-
-
-
-
-
