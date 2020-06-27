@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  window.mySwipe = $('#mySwipe').Swipe({
+  window.mySwipe = $('.mySwipe').Swipe({
 	 startSlide: 0,   //초기에 첫 번째 배너가 노출
-	 auto: 3000,  //3초 이후 자동으로 배너가 이동
+	 auto: false,  //3초 이후 자동으로 배너가 이동
 	 continuous: true, //배너가 반복되어 롤링
 	 disableScroll: true, //슬라이드 배너에 스크롤바 생성을 차단
 	 stopPropagation: true, //하위 요소에 이벤트 전달을 차단

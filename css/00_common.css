@@ -16,13 +16,13 @@ a{text-decoration: none; color: inherit;}
 body{font: normal 14px/1.5em "nanum"; background-color: #fff; color: #222;}
 
 /*wrap*/
-#wrap{width: 100%; height: auto;}
+.wrap{width: 100%; height: auto;}
 
 /*container*/
-#container{width: 100%; height: auto; padding-left: 142px;} /*height 임시*/
+.container{width: 100%; height: auto; padding-left: 142px;} /*height 임시*/
 
 @media screen and (max-width:1300px) {
-    #container{overflow: hidden; min-width: 1100px;} 
+    .container{overflow: hidden; min-width: 1100px;} 
 }
 /*overflow: hidden; min-width: 1100px;*/ /*이렇게 2개 써주면 스크롤 1100px에서 초기화됨*/
 /*미디어쿼리에서 1300이면 이거보다 약간 작은값으로 해줘야 200px 이동하면서 화면 잘보임*/

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*left_wrap*/
-#left_wrap{width: 142px; height: 100%; float: left; position: fixed; border-right: 1px solid #eaeaea; background-color: #fff; z-index: 10;}
+.left_wrap{width: 142px; height: 100%; float: left; position: fixed; border-right: 1px solid #eaeaea; background-color: #fff; z-index: 10;}
 
 /*logo*/
 .logo{width: 69px; height: 50px; margin-top: 30px; margin-left: 30px;}
@@ -12,12 +12,12 @@
 .category{width: 142px; height: 30px; line-height: 30px; margin-top: 70px; padding-left: 30px; font-weight: bold; position: relative;}
 .category img{margin-left: 10px;}
 .toggle{width: 142px; height: 30px; position: absolute; top: 0; left: 0px; display: none; cursor: pointer;}
-#gnb{width: 142px; /*overflow: scroll;*/}
-#main_gnb{width: 142px; padding-left: 30px; margin-top: 50px; font-weight: bold; line-height: 40px;}
-#sub_gnb{width: 142px; padding-left: 30px; margin-top: 70px; line-height: 40px; font-weight: normal;}
+.gnb{width: 142px; /*overflow: scroll;*/}
+.main_gnb{width: 142px; padding-left: 30px; margin-top: 50px; font-weight: bold; line-height: 40px;}
+.sub_gnb{width: 142px; padding-left: 30px; margin-top: 70px; line-height: 40px; font-weight: normal;}
 .category a:hover{color: #3bded4; text-decoration: underline;}
-#gnb li a:hover{color: #3bded4; text-decoration: underline;}
-#sub_gnb li a:hover{color: #3bded4; text-decoration: underline;}
+.gnb li a:hover{color: #3bded4; text-decoration: underline;}
+.sub_gnb li a:hover{color: #3bded4; text-decoration: underline;}
 
 /*submenu*/
 .submenu{width: 160px; height: 100%; line-height: 40px; padding-left: 20px; padding-top: 150px; 
