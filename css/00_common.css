@@ -10,7 +10,7 @@
 }
 
 /*reset*/
-*{box-sizing: border-box}
+*{box-sizing: border-box;}
 ul,li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 body{font: normal 14px/1.5em "nanum"; background-color: #fff; color: #222;}
@@ -19,4 +19,15 @@ body{font: normal 14px/1.5em "nanum"; background-color: #fff; color: #222;}
 #wrap{width: 100%; height: auto;}
 
 /*container*/
-#container{width: 100%; height: auto; float: left; margin-left: 142px;} /*height 임시*/
+#container{width: 100%; height: auto; padding-left: 142px;} /*height 임시*/
+
+@media screen and (max-width:1300px) {
+    #container{overflow: hidden; min-width: 1100px;} 
+}
+/*overflow: hidden; min-width: 1100px;*/ /*이렇게 2개 써주면 스크롤 1100px에서 초기화됨*/
+/*미디어쿼리에서 1300이면 이거보다 약간 작은값으로 해줘야 200px 이동하면서 화면 잘보임*/
+
+/*min-width 설정해놓으면 */
+/* 해당 해상도 이하 부터는 줄여도 오브젝트 줄 안바뀜 */
+/* 미디어 쿼리랑 같이 사용시 하나라도 min-width 잡혀있으면 제일 넓은거 기준으로 스크롤 생김 */
+/* 한마디로 미디어쿼리랑 사용하려면 min-width일단 다없애고 스크롤 생길지점 하나만 정해서 오브젝트하나에 입력해주기 */
