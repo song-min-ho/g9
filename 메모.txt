@@ -1,3 +1,0 @@
-ranking 테두리는 808080
-oversea 팝업 테두리는 cccccc
-oversea search 테두리는 222222

@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*left_wrap*/
-.left_wrap{width: 142px; height: 100%; float: left; position: fixed; border-right: 1px solid #eaeaea; background-color: #fff; z-index: 10;}
+.left_wrap{width: 142px; height: 100%; float: left; position: fixed; border-right: 1px solid #eaeaea; background-color: #fff; z-index: 10000;}
 
 /*logo*/
 .logo{width: 69px; height: 50px; margin-top: 30px; margin-left: 30px;}
@@ -21,5 +21,5 @@
 
 /*submenu*/
 .submenu{width: 160px; height: 100%; line-height: 40px; padding-left: 20px; padding-top: 150px; 
-    position: absolute; left: -20px; background-color: #fff; z-index: 9; border-right: 1px solid #eaeaea; position: fixed;}
+    position: absolute; left: -20px; background-color: #fff; z-index: 9999; border-right: 1px solid #eaeaea; position: fixed;}
 .submenu a:hover{color: #3bded4; text-decoration: underline;}

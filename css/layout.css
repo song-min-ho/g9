@@ -4,13 +4,21 @@
 @import url("00_top.css");
 @import url("00_bottom.css");
 
-.slide_wrap{width: 100%; height: 360px; margin-bottom: 5px; position: relative; overflow: hidden;}
-.slide_wrap > a > div{visibility: hidden}
-.slide_wrap > a > div.selected{visibility: visible}
-
 /*slide*/
-.slide{width: 100%; height: 360px; position: absolute; left: 0; top: 0;}
-.slide>img{width: 1000px; height: 360px; margin-left: -1000px; float: right; } /*margin left 마이너스로*/
+.slide{width: 100%; height: 360px; position: relative;}
+.slide li{width: 100%; height: 360px; display: inline-block;}
+.slick-arrow{position: absolute; bottom:-40px; float: left; cursor: pointer; border: none;}
+.slick-prev{left: 30px; width: 30px; height: 30px; background: url("../images/common/leftbutton2.png") no-repeat center;}
+.slick-next{left: 195px; width: 30px; height: 30px; background: url("../images/common/rightbutton2.png") no-repeat center;}
+.slick-dots{position: absolute; left: 65px; bottom: -35px;}
+.slick-dots li{display: inline-block; float: left; width: 20px; height: 20px; margin-left: 10px;}
+.slick-dots li button{ border: none; border-radius: 20px; cursor: pointer; text-indent: -9999px;}
+.slick-active button{background-color: #3dbed4;}
+
+/*slide_img*/
+.slide_wrap{width: 100%; height: 390px; margin-bottom: 5px; position: relative;}
+.slide_img{width: 100%; height: 360px;}
+.slide_img>img{width: 1000px; height: 360px; margin-left: -1000px; float: right; } /*margin left 마이너스로*/
 .bluebox{width: 80%; height: 360px; float: left; background-color: #9CDAF1;}
 .yellowbox{width: 80%; height: 360px; float: left; background-color: #FFF8D3;}
 .greenbox{width: 80%; height: 360px; float: left; background-color: #20e5ba;}
@@ -19,16 +27,6 @@
 .slide_txt h3{font-size: 35px; line-height: 45px; font-weight: normal;}
 .slide_txt p{margin-top: 10px; line-height: 20px; font-size: 12px;}
 .slide_txt img{margin-top: 20px;}
-
-/*slide button*/
-.slide_button{width: 200px; height: 40px; margin-left: 30px;}
-.slide_circle{width: 120px; height: 40px; float: left;}
-.slide_circle div{width: 20px; height: 20px; float: left; margin: 8px 5px; border-radius: 20px; background-color: #eaeaea;}
-.left_button{float: left;}
-.left_button:hover{cursor: pointer;}
-.right_button{float: left;}
-.right_button:hover{cursor: pointer;}
-.slide_circle div.selected{background-color: #3bded4;}
 
 /*item*/
 .contents{width: 100%; overflow: auto; margin-top: 40px; padding-left: 10px; padding-right: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
