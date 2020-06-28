@@ -10,10 +10,11 @@
 }
 
 /*reset*/
-*{box-sizing: border-box;}
+*{box-sizing: border-box; outline:none;}
 ul,li{list-style: none;}
 a{text-decoration: none; color: inherit;}
 body{font: normal 14px/1.5em "nanum"; background-color: #fff; color: #222;}
+input:focus {outline:none;}
 
 /*wrap*/
 .wrap{width: 100%; height: auto;}

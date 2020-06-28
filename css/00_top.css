@@ -2,7 +2,7 @@
 
 /*top*/
 .top{width: 100%; height: 90px; min-width: 750px; padding: 25px 30px 25px 172px; position: fixed; z-index: 5000; background-color: #fff; opacity: 0.9;} /*최대한 보여야되니까 min-width는 최대한 작게*/
-.search{width: 300px; height: 40px;float: left; border-radius: 30px;}
+.search{width: 300px; height: 40px;float: left; border-radius: 30px; text-indent: 30px;}
 .submit{width: 30px; height: 30px; border: none; position: relative; top: 5px; right: 45px; background: #fff url("../images/common/search.png") no-repeat center center;}                
 
 /*icon*/
