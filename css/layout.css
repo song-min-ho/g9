@@ -5,7 +5,8 @@
 @import url("00_bottom.css");
 
 /*slide*/
-.slide{width: 100%; height: 360px; position: relative;}
+.slide_wrap{width: 100%; overflow: hidden;}
+.slide{width: 100%; height: 360px; position: relative; }
 .slide li{width: 100%; height: 360px; display: inline-block;}
 .slick-arrow{position: absolute; bottom:-40px; float: left; cursor: pointer; border: none;}
 .slick-prev{left: 30px; width: 30px; height: 30px; background: url("../images/common/leftbutton2.png") no-repeat center;}
@@ -15,8 +16,20 @@
 .slick-dots li button{ border: none; border-radius: 20px; cursor: pointer; text-indent: -9999px;}
 .slick-active button{background-color: #3dbed4;}
 
+
+/*슬라이드 애니메이션*/
+.slick-active .splitting .char{
+    display: inline-block;
+    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+}
+@keyframes slide-up{
+    0%{transform: translateY(30px); opacity: 0;}
+    80%{transform: translateY(30px); opacity: 0;}
+}
+
 /*slide_img*/
-.slide_wrap{width: 100%; height: 390px; margin-bottom: 5px; position: relative;}
+.slide_wrap{width: 100%; height: 400px; margin-bottom: 5px; position: relative;} /*slick-track 없애주기*/
 .slide_img{width: 100%; height: 360px;}
 .slide_img>img{width: 1000px; height: 360px; margin-left: -1000px; float: right; } /*margin left 마이너스로*/
 .bluebox{width: 80%; height: 360px; float: left; background-color: #9CDAF1;}
