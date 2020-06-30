@@ -1,4 +1,4 @@
-/*매서드 찾는 방법 알자*/
+/*slick 매서드*/
 
 $(function () {
     $('.slide_wrap .slide').slick({        

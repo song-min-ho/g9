@@ -17,11 +17,13 @@
 .slick-active button{background-color: #3dbed4;}
 
 
-/*슬라이드 애니메이션*/
+/*슬라이드 텍스트 애니메이션*/
 .slick-active .splitting .char{
     display: inline-block;
     animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
-    animation-delay: calc(60ms * var(--char-index));
+    /*fill-mode:both; 는 시작전에 스타일 적용 + 마지막 키프레임 유지 */
+    animation-delay: calc(60ms * var(--char-index)); /*splitting*/
+    /*calc는 css에서 사용되는 수식 계산해주는 함수*/
 }
 @keyframes slide-up{
     0%{transform: translateY(30px); opacity: 0;}
@@ -44,12 +46,14 @@
 /*item*/
 .contents{width: 100%; overflow: auto; margin-top: 40px; padding-left: 10px; padding-right: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
 .item{width: 25%; float: left; margin-bottom: 60px; padding-left: 20px;}
-.scale{width: 100%; height: ; overflow: hidden;}
+.scale{width: 100%; overflow: hidden;}
 .item img{width: 100%; transition: all 0.4s ease-in-out;}
 .item img:hover{transform: scale(1.1);}
 .item p strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
 .item p span{display: block; font-weight: normal; color: #222; line-height: 22px;}
 
+/*모바일 먼저 만들고 키우면서 작업할꺼면 min-width*/
+/*풀 스크린에서 줄이면서 작업할꺼면 max-width*/
 @media screen and (max-width:1300px) {
     .item:nth-child(4n){display: none;}    
     .item{width: 33%;}

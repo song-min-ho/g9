@@ -1,7 +1,5 @@
 /*https://kutar37.tistory.com/entry/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EC%87%BC-%EA%B5%AC%ED%98%84-cssjavascriptjquery*/
-
-
-$(function () {
+$(function(){
     
     /* 카테고리 오버*/
     $(".category a").hover(function(){
