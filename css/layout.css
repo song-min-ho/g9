@@ -5,35 +5,19 @@
 @import url("00_bottom.css");
 
 /*slide*/
-.slide_wrap{width: 100%; overflow: hidden;}
-.slide{width: 100%; height: 360px; position: relative; }
-.slide li{width: 100%; height: 360px; display: inline-block;}
-.slick-arrow{position: absolute; bottom:-40px; float: left; cursor: pointer; border: none;}
-.slick-prev{left: 30px; width: 30px; height: 30px; background: url("../images/common/leftbutton2.png") no-repeat center;}
-.slick-next{left: 195px; width: 30px; height: 30px; background: url("../images/common/rightbutton2.png") no-repeat center;}
-.slick-dots{position: absolute; left: 65px; bottom: -35px;}
-.slick-dots li{display: inline-block; float: left; width: 20px; height: 20px; margin-left: 10px;}
-.slick-dots li button{ border: none; border-radius: 20px; cursor: pointer; text-indent: -9999px;}
-.slick-active button{background-color: #3dbed4;}
-
-
-/*슬라이드 텍스트 애니메이션*/
-.slick-active .splitting .char{
-    display: inline-block;
-    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;
-    /*fill-mode:both; 는 시작전에 스타일 적용 + 마지막 키프레임 유지 */
-    animation-delay: calc(60ms * var(--char-index)); /*splitting*/
-    /*calc는 css에서 사용되는 수식 계산해주는 함수*/
-}
-@keyframes slide-up{
-    0%{transform: translateY(30px); opacity: 0;}
-    80%{transform: translateY(30px); opacity: 0;}
-}
+.swiper{width: 100%px; height: 400px; overflow: hidden; position: relative; margin-bottom: 5px;}
+.swiper-wrapper{width: 100%; height: 360px; position:relative;}
+.swiper-slide{width: 100%; height: 360px; display: inline-block; position: relative;}
+.swiper-button-prev{top: 90%; left: 30px;width: 38px; height: 38px; background: url("../images/common/banner_left.png") no-repeat; border: 1px solid #eee; border-right: none;}
+.swiper-button-next{top: 90%; left: 106px; width: 38px; height: 38px; background: url("../images/common/banner_right.png") no-repeat; border: 1px solid #eee; border-left: none; border-right: none;}
+.swiper-pagination{top: 338px; left: 68px; width: 38px; height: 38px; background-color: #fff; border: 1px solid #eee; border-left: none; border-right: none; line-height: 36px; font-size: 12px; padding-left: 3px;}
+.swiper-button-play, .swiper-button-pause{position: absolute; z-index: 10; top: 338px; left: 144px; width: 38px; height: 38px; border: 1px solid #eee; border-left: none; cursor: pointer;}
+.swiper-button-play{background: url("../images/common/playbutton.png") no-repeat;}
+.swiper-button-pause{background: url("../images/common/pausebutton.png") no-repeat; display: none;}
 
 /*slide_img*/
-.slide_wrap{width: 100%; height: 400px; margin-bottom: 5px; position: relative;} /*slick-track 없애주기*/
 .slide_img{width: 100%; height: 360px;}
-.slide_img>img{width: 1000px; height: 360px; margin-left: -1000px; float: right; } /*margin left 마이너스로*/
+.slide_img>img{width: 1000px; height: 360px; margin-left: -1000px; float: right; transition: all 0.6s; position: relative; left: 40px;} /*margin left 마이너스로*/
 .bluebox{width: 80%; height: 360px; float: left; background-color: #9CDAF1;}
 .yellowbox{width: 80%; height: 360px; float: left; background-color: #FFF8D3;}
 .greenbox{width: 80%; height: 360px; float: left; background-color: #20e5ba;}
@@ -43,8 +27,44 @@
 .slide_txt p{margin-top: 10px; line-height: 20px; font-size: 12px;}
 .slide_txt img{margin-top: 20px;}
 
+.swiper .swiper-slide-active .slide_img>img{left: 0px; opacity:1}
+
+
+/*슬라이드 텍스트 애니메이션*/
+/*
+.slick-active .splitting .char{
+    display: inline-block;
+    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;    
+    animation-delay: calc(60ms * var(--char-index));
+}
+@keyframes slide-up{
+    0%{transform: translateY(30px); opacity: 0;}
+    80%{transform: translateY(30px); opacity: 0;}
+}
+*/
+
+/*슬라이드 이미지 애니메이션*/
+.slick-active .slide_img>img{
+    display: inline-block;
+    animation: slide-up2 0.5s cubic-bezier(.5, 0, .5, 1) both;
+    /*fill-mode:both; 는 시작전에 스타일 적용 + 마지막 키프레임 유지 */
+    /*animation-delay: calc(60ms * var(--char-index)); *//*splitting*/
+    /*calc는 css에서 사용되는 수식 계산해주는 함수*/
+}
+@keyframes slide-up2{
+    0%{transform: translateX(30px); opacity: 0;}
+    /*80%{transform: translateX(30px); opacity: 0;}*/
+}
+
+
 /*item*/
 .contents{width: 100%; overflow: auto; margin-top: 40px; padding-left: 10px; padding-right: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
+.item_first{width: 49%; float: left; margin-bottom: 60px; padding-left: 20px;}
+.item_first img{width: 100%; transition: all 0.4s ease-in-out;}
+.item_first img:hover{transform: scale(1.1);}
+.item_first p strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
+.item_first p span{display: block; font-weight: normal; color: #222; line-height: 22px;}
+
 .item{width: 25%; float: left; margin-bottom: 60px; padding-left: 20px;}
 .scale{width: 100%; overflow: hidden;}
 .item img{width: 100%; transition: all 0.4s ease-in-out;}
@@ -52,11 +72,32 @@
 .item p strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
 .item p span{display: block; font-weight: normal; color: #222; line-height: 22px;}
 
+/*item2*/
+.item2{width: 25%; float: left; margin-bottom: 60px; padding-left: 20px; position: relative;}
+.item2 .b_item{height: 280px;}
+.item2 .b_item img{width: 100%; transition: all 0.4s ease-in-out;}
+.item2 .b_item img:hover{transform: scale(1.1);}
+.item2 p.b_txt{position: absolute; width: 85%; top: 140px; background-color: #fff; }
+.item2 p.b_txt strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
+.item2 p.b_txt span{display: block; font-weight: normal; color: #222; line-height: 22px;}
+
+.item2 .s_item{}
+.item2 .s_item img{width: 100px; position: absolute;}
+.item2 .s_item p.s_txt{padding-top: 5px; display: inline; padding-left: 110px;}
+.item2 .s_item p.s_txt strong{font-weight: normal; font-size: 16px;}
+.item2 .s_item p.s_txt span{color: #888; font-size: 12px;}
+
+/*overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;*/
+
 /*모바일 먼저 만들고 키우면서 작업할꺼면 min-width*/
 /*풀 스크린에서 줄이면서 작업할꺼면 max-width*/
 @media screen and (max-width:1300px) {
     .item:nth-child(4n){display: none;}    
-    .item{width: 33%;}
+	.item:nth-child(7){display: none;}
+	.item_first{width: 65%;}
+	.item{width: 33%;}	
 }
 
 /*banner*/

@@ -9,15 +9,15 @@
 .logo a{display: block;}
 
 /*gnb*/
-.category{width: 142px; height: 30px; line-height: 30px; margin-top: 70px; padding-left: 30px; font-weight: bold; position: relative;}
+.category{width: 142px; height: 30px; line-height: 30px; margin-top: 30px; padding-left: 30px; font-weight: bold; position: relative;}
 .category img{margin-left: 10px;}
 .toggle{width: 142px; height: 30px; position: absolute; top: 0; left: 0px; display: none; cursor: pointer;}
 .gnb{width: 142px; /*overflow: scroll;*/}
-.main_gnb{width: 142px; padding-left: 30px; margin-top: 50px; font-weight: bold; line-height: 40px;}
-.sub_gnb{width: 142px; padding-left: 30px; margin-top: 70px; line-height: 40px; font-weight: normal;}
-.category a:hover{color: #3bded4; text-decoration: underline;}
-.gnb li a:hover{color: #3bded4; text-decoration: underline;}
-.sub_gnb li a:hover{color: #3bded4; text-decoration: underline;}
+.main_gnb{width: 142px; padding-left: 30px; margin-top: 30px; font-weight: bold; line-height: 33px;}
+.sub_gnb{width: 142px; padding-left: 30px; margin-top: 28px; line-height: 33px; font-weight: normal;}
+.category a:hover{color: #00C6FF; text-decoration: underline;}
+.gnb li a:hover{color: #00C6FF; text-decoration: underline;}
+.sub_gnb li a:hover{color: #00C6FF; text-decoration: underline;}
 
 /*submenu*/
 .submenu{width: 160px; height: 100%; line-height: 40px; padding-left: 20px; padding-top: 150px; 

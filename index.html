@@ -8,17 +8,18 @@
 	<![endif]-->	
 	<link rel="shortcut icon" href="images/favicon.ico" type="images/x-icon" />
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/layout.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/layout.css">	
 	<script src="js/jquery-3.5.1.min.js"></script>	
 	<script src="js/jquery.slick.min.js"></script>
-	<script src="js/slick.js"></script>	
-	<script src="js/script.js"></script>	
-	<script src="js/jquery.splitting-lite.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>	
+	<script src="js/swiper.js"></script>
+	<script src="js/script.js"></script>		
 </head>
 <body>
     <div class="wrap">       
         <div class="left_wrap">
-            <h1 class="logo"><a href="index.html"><img src="images/common/logo.png" alt="G9로고"></a></h1>
+            <h1 class="logo"><a href="index.html"><img src="images/common/logo.gif" alt="G9로고"></a></h1>
             <div class="category"><a href="#">카테고리<img src="images/common/more1.png" alt="more"></a><div class="toggle"></div></div>                        
             <div class="gnb">
                 <nav class="main_gnb">
@@ -27,13 +28,19 @@
                         <li><a href="#">랭킹</a></li>
                         <li><a href="#">해외직구</a></li>
                         <li><a href="#">맛지구</a></li>
-                        <li><a href="#">홈스타일링</a></li>
-                        <li><a href="#">뭐하지</a></li>
+                        <li><a href="#">명품관</a></li>
+                        <li><a href="#">백화점</a></li>
+                        <li><a href="#">뷰티샵</a></li>
+                        <li><a href="#">홈앤펫</a></li>
+                        <li><a href="#">뭐하지?</a></li>
                     </ul>
                 </nav><!--main_gnb-->
                 <nav class="sub_gnb">
                     <ul>
-                        <li><a href="#">쿠폰 · 이벤트</a></li>
+                        <li><a href="#">e쿠폰</a></li>
+                        <li><a href="#">도서·음반</a></li>
+                        <li><a href="#">항공권</a></li>
+                        <li><a href="#">쿠폰·이벤트</a></li>
                         <li><a href="#">About G9</a></li>                
                     </ul>
                 </nav><!--sub_gnb-->
@@ -57,109 +64,111 @@
                 </ul>
         </nav><!--submenu-->
         <div class="top">
-                <input type="search" class="search">
+                <input type="search" class="search" placeholder="전상품 무료배송, 반품비 월 1만원 지원">
                 <input type="submit" class="submit" value="">
                 <div class="icon">
                     <p><a href="#"><img src="images/common/icon1.png" alt="장바구니"></a></p>
                     <p><a href="#"><img src="images/common/icon2.png" alt="찜"></a></p>
                     <p><a href="#"><img src="images/common/icon3.png" alt="로그인"></a></p>
                 </div><!--icon-->
-        </div><!--top-->
-        <div class="container">                    
-            <div class="slide_wrap">                
-                <ul class="slide">
-                    <li>
-                        <a href="#">
-                            <div class="slide_img">
-                                <div class="bluebox"></div>
-                                <img src="images/index/index_banner1.jpg" alt="slide_banner">
-                                <div class="slide_txt">
-                                    <h3 data-splitting>
-                                        당신을 위해 준비한 <br>
-                                        가득한 혜택
-                                    </h3>
-                                    <p data-splitting>
-                                        스마일 클럽 회원이라면 <br>
-                                        더 큰 혜택을 드려요!
-                                    </p>
-                                    <img src="images/common/arrow2.png" alt="arrow">
-                                </div>
-                            </div><!--slide_img-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="slide_img">
-                                <div class="yellowbox"></div>
-                                <img src="images/index/index_banner2.jpg" alt="slide_banner">
-                                <div class="slide_txt">
-                                    <h3 data-splitting>
-                                        구매자 1천명에게 <br>
-                                        파리바게트 상품권!
-                                    </h3>
-                                    <p data-splitting>
-                                        G9 카톡친구 맺고 구매하세요 <br>
-                                        쇼핑하면 선물주는 G9 카톡
-                                    </p>
-                                    <img src="images/common/arrow2.png" alt="arrow">
-                                </div>
-                            </div><!--slide_img-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="slide_img">
-                                <div class="greenbox"></div>
-                                <img src="images/index/index_banner3.jpg" alt="slide_banner">
-                                <div class="slide_txt">
-                                    <h3 data-splitting>
-                                        오늘도 <br>
-                                        고민없이 참 잘 샀다!
-                                    </h3>
-                                    <p data-splitting>
-                                        배송비 무료 반품비 1만원 지원 <br>
-                                        G9에서 깔끔한 혜택받고 쇼핑합니다!
-                                    </p>
-                                    <img src="images/common/arrow2.png" alt="arrow">
-                                </div>
-                            </div><!--slide_img-->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <div class="slide_img">
-                                <div class="orangebox"></div>
-                                <img src="images/index/index_banner4.jpg" alt="slide_banner">
-                                <div class="slide_txt">
-                                    <h3 data-splitting>
-                                        스마일카드 이벤트 <br>
-                                        총 40,000원 혜택!
-                                    </h3>
-                                    <p data-splitting>
-                                        G9-G마켓, 옥션 총 1만원 할인 <br>
-                                        삼성페이, 대중교통 총 3만원 캐시백!
-                                    </p>
-                                    <img src="images/common/arrow2.png" alt="arrow">
-                                </div>
-                            </div><!--slide_img-->
-                        </a>
-                    </li>
-                </ul><!--slide-->                              
-            </div><!--slide_wrap-->            
-            <div class="contents">               
-                <section class="item">
-                    <a href="#"><div class="scale"><img src="images/index/index_item0.jpg" alt="item"></div>
-                        <p>
-                            <strong>감사의 마음에 아름다움을 담아 <br>뷰티 기프트세트로 선물하세요! <br></strong>
-                            <span>가정의 달 뷰티 기프트 특가로 <br>센스있는 선물 준비하기 ♥</span>
-                        </p>
-                    </a>
-                </section>
-                <section class="item">
+        </div><!--top--> 
+        <div class="container">
+             <div class="swiper-container swiper">
+				 <ul class="swiper-wrapper">
+					<li class="swiper-slide">
+						<a href="#">
+							<div class="slide_img">
+								<div class="bluebox"></div>
+								<img src="images/index/index_banner1.jpg" alt="slide_banner">
+								<div class="slide_txt">
+									<h3 data-splitting>
+										당신을 위해 준비한 <br>
+										가득한 혜택
+									</h3>
+									<p data-splitting>
+										스마일 클럽 회원이라면 <br>
+										더 큰 혜택을 드려요!
+									</p>
+									<img src="images/common/arrow2.png" alt="arrow">
+								</div>
+							</div><!--slide_img-->
+						</a>						
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<div class="slide_img">
+								<div class="yellowbox"></div>
+								<img src="images/index/index_banner2.jpg" alt="slide_banner">
+								<div class="slide_txt">
+									<h3 data-splitting>
+										구매자 1천명에게 <br>
+										파리바게트 상품권!
+									</h3>
+									<p data-splitting>
+										G9 카톡친구 맺고 구매하세요 <br>
+										쇼핑하면 선물주는 G9 카톡
+									</p>
+									<img src="images/common/arrow2.png" alt="arrow">
+								</div>
+							</div><!--slide_img-->
+						</a>
+					</li>
+					<li class="swiper-slide">							
+						<a href="#">
+							<div class="slide_img">
+								<div class="greenbox"></div>
+								<img src="images/index/index_banner3.jpg" alt="slide_banner">
+								<div class="slide_txt">
+									<h3 data-splitting>
+										오늘도 <br>
+										고민없이 참 잘 샀다!
+									</h3>
+									<p data-splitting>
+										배송비 무료 반품비 1만원 지원 <br>
+										G9에서 깔끔한 혜택받고 쇼핑합니다!
+									</p>
+									<img src="images/common/arrow2.png" alt="arrow">
+								</div>
+							</div><!--slide_img-->
+						</a>						
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<div class="slide_img">
+								<div class="orangebox"></div>
+								<img src="images/index/index_banner4.jpg" alt="slide_banner">
+								<div class="slide_txt">
+									<h3 data-splitting>
+										스마일카드 이벤트 <br>
+										총 40,000원 혜택!
+									</h3>
+									<p data-splitting>
+										G9-G마켓, 옥션 총 1만원 할인 <br>
+										삼성페이, 대중교통 총 3만원 캐시백!
+									</p>
+									<img src="images/common/arrow2.png" alt="arrow">
+								</div>
+							</div><!--slide_img-->
+						</a>
+					</li>        		
+				</ul><!--swiper-wrapper-->
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-play"></div>
+				<div class="swiper-button-pause"></div>
+			</div><!--swiper-container-->
+                       
+                       
+                        
+            <div class="contents">  
+                <section class="item_first">
                     <a href="#"><div class="scale"><img src="images/index/index_item1.jpg" alt="item"></div>
                         <p>
-                            <strong>시원한 여름을 맞이하고 싶다면 <br>씽씽~ 에어컨 미리 준비해요! <br></strong>
-                            <span>기본 설치비부터 전국 배송비까지 포함! <br>G9에서 편하게 에어컨 장만하고 가세요~ </span>
+                            <strong>바닐라코 썸머 파티 <br>1+1 이벤트에 최대 60% 할인까지! <br></strong>
+                            <span>클렌징부터 색조까지 싹-쓰리<br>혜택 가득받고 G르러 가기~</span>
                         </p>
                     </a>
                 </section>
@@ -210,8 +219,28 @@
                             <span>맑고 깨끗한 피부를 원한다면 <br>다벨영에서 매일 더 어려지세요~</span>
                         </p>
                     </a>
-                </section>               
-            </div><!--contents-->
+                </section>   
+                
+                <section class="item2">
+                	<div class="b_item">
+						<div class="scale"><img src="images/index/item2_b1.jpg" alt="item"></div>
+						<p class="b_txt">
+							<strong>피부가 고민이라면 주목! <br>쇼킹한 후기! 화제의 그 제품 라벨영 <br></strong>
+							<span>맑고 깨끗한 피부를 원한다면 <br>다벨영에서 매일 더 어려지세요~</span>
+						</p> 
+					</div>
+					<div class="s_item">
+						<img src="images/index/item2_b1_s1.jpg" alt="s_item">
+						<p class="s_txt">
+							<strong>55,850 <br></strong>
+							<span>버켄스탁 (광주신세계)BIRKENSTOCK 20SS 버넼스탁아리조</span>
+						</p> 
+					</div>                   
+                </section>            
+            </div><!--contents-->             
+                      
+                                
+                                                    
             <div class="banner_wrap">
                 <a href="#"><img class="banner" src="images/index/index_banner5.jpg" alt="banner"></a>
             </div><!--banner_wrap-->
