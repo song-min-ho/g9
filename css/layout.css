@@ -20,7 +20,7 @@
 .slide_img>img{width: 1000px; height: 360px; margin-left: -1000px; float: right; transition: all 0.6s; position: relative; left: 40px;} /*margin left 마이너스로*/
 .bluebox{width: 80%; height: 360px; float: left; background-color: #9CDAF1;}
 .yellowbox{width: 80%; height: 360px; float: left; background-color: #FFF8D3;}
-.greenbox{width: 80%; height: 360px; float: left; background-color: #20e5ba;}
+.greenbox{width: 80%; height: 360px; float: left; background-color: #F1E3D8;}
 .orangebox{width: 80%; height: 360px; float: left; background-color: #ffdea9;}
 .slide_txt{position: absolute; top: 100px; left: 70px;}
 .slide_txt h3{font-size: 35px; line-height: 45px; font-weight: normal;}
@@ -30,7 +30,7 @@
 .swiper .swiper-slide-active .slide_img>img{left: 0px; opacity:1}
 
 
-/*슬라이드 텍스트 애니메이션*/
+/*slick 애니메이션*/
 /*
 .slick-active .splitting .char{
     display: inline-block;
@@ -41,22 +41,15 @@
     0%{transform: translateY(30px); opacity: 0;}
     80%{transform: translateY(30px); opacity: 0;}
 }
-*/
-
-/*슬라이드 이미지 애니메이션*/
 .slick-active .slide_img>img{
     display: inline-block;
     animation: slide-up2 0.5s cubic-bezier(.5, 0, .5, 1) both;
-    /*fill-mode:both; 는 시작전에 스타일 적용 + 마지막 키프레임 유지 */
-    /*animation-delay: calc(60ms * var(--char-index)); *//*splitting*/
-    /*calc는 css에서 사용되는 수식 계산해주는 함수*/
 }
 @keyframes slide-up2{
     0%{transform: translateX(30px); opacity: 0;}
-    /*80%{transform: translateX(30px); opacity: 0;}*/
 }
 
-
+*/
 /*item*/
 .contents{width: 100%; overflow: auto; margin-top: 40px; padding-left: 10px; padding-right: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
 .item_first{width: 49%; float: left; margin-bottom: 60px; padding-left: 20px;}
@@ -73,23 +66,27 @@
 .item p span{display: block; font-weight: normal; color: #222; line-height: 22px;}
 
 /*item2*/
-.item2{width: 25%; float: left; margin-bottom: 60px; padding-left: 20px; position: relative;}
-.item2 .b_item{height: 280px;}
+.item2{width: 25%; float: left; margin-bottom: 60px; padding-left: 20px;}
+.item2 .b_item{}
 .item2 .b_item img{width: 100%; transition: all 0.4s ease-in-out;}
 .item2 .b_item img:hover{transform: scale(1.1);}
-.item2 p.b_txt{position: absolute; width: 85%; top: 140px; background-color: #fff; }
-.item2 p.b_txt strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
+.item2 p.b_txt{width: 85%; height: 110px; position: relative; top: -50px; background-color: #fff; padding-top: 1px;}
+.item2 p.b_txt strong{width: 100%; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
 .item2 p.b_txt span{display: block; font-weight: normal; color: #222; line-height: 22px;}
 
-.item2 .s_item{}
-.item2 .s_item img{width: 100px; position: absolute;}
-.item2 .s_item p.s_txt{padding-top: 5px; display: inline; padding-left: 110px;}
+.item2 .s_item{display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+display: -o-flex;
+display: flex; position: relative; top: -35px; padding-top: 10px;}
+.item2 .s_item img{width: 100px; height: 100px; float: left;}
+.item2 .s_item p.s_txt{padding-top: 5px; display: inline; margin-left: 10px;}
 .item2 .s_item p.s_txt strong{font-weight: normal; font-size: 16px;}
-.item2 .s_item p.s_txt span{color: #888; font-size: 12px;}
-
-/*overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;*/
+.item2 .s_item p.s_txt span{color: #888; font-size: 12px; overflow: hidden; text-overflow: ellipsis;}
+.item2 .more{position: relative; top: -20px; display: block; margin-top: 5px; padding-top: 15px; border-top: 1px solid #ccc; font-size: 13px;}
+.item2 .s_item p.s_txt span.mini_box{display: block; width: 50px; margin-top: 5px; text-align: center; background-color: #A9BCCE; color: #fff;}
+.item_more{width: 100px; height: 40px; text-align: center; line-height: 40px; margin: 0 auto; clear: both; border-radius: 20px; border: 1px solid #222; font-weight: bold; margin-bottom: 50px;}
+.item_more a{display: block;}
 
 /*모바일 먼저 만들고 키우면서 작업할꺼면 min-width*/
 /*풀 스크린에서 줄이면서 작업할꺼면 max-width*/
@@ -98,20 +95,27 @@
 	.item:nth-child(7){display: none;}
 	.item_first{width: 65%;}
 	.item{width: 33%;}	
+	.item2{width: 33%;}
+	.item2_last{display: none;}	
 }
 
 /*banner*/
-.banner_wrap{width: 100%; margin: 20px 0; background-color: #E6E3DE; position: relative;}
+.banner_wrap{width: 100%; margin: 20px 0 70px; background-color: #E6E3DE; position: relative;}
 .banner{width: 1120px; margin: 0 auto; display: block;}
 
 /*hotdeal*/
-.hotdeal{width: 100%; height: auto; padding: 0 30px; margin-top: 50px; margin-bottom: 60px; overflow: auto;}
-.hotdeal h3{width: 90px; height: 80px; line-height: 80px; font-size: 42px; position: relative; font-weight: normal;}
+.hotdeal{width: 100%; height: auto; padding-right: 30px; margin-top: 50px; margin-bottom: 60px; overflow: auto;}
+.hotdeal h3{margin-left: 30px; width: 90px; height: 80px; line-height: 80px; font-size: 42px; position: relative; font-weight: normal; float: left; margin-bottom: 20px;}
 .new{position: absolute; top: 0px; right: -10px; width: 40%;}
-.hotdeal_item{float: left; width: 20%; padding-right: 20px;}
-.hotdeal_item:nth-child(6){padding-right: 0px;}
+.hotdeal .more{width: 140px; font-size: 16px; float: right; margin-top: 30px;}
+.hotdeal .hotdeal_item_wrap{clear: both;}
+
+
+.hotdeal_item{float: left; width: 20%; padding-left: 30px; margin-bottom: 30px;}
 .hotdeal_item img{width: 100%;}
+.hotdeal_item p{height: 140px; margin-top: 20px;}
 .hotdeal_item p strong{display: block; font-size: 20px; margin-bottom: 5px;}
+.hotdeal_item p .coupon{font-size: 12px; display: block; width: 54px; text-align: center; border: 1px solid #A9BCCE; color: #A9BCCE; margin: 5px 0;}
 
 @media screen and (max-width:1300px) {
     .hotdeal_item:nth-child(6){display: none;}   
