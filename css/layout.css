@@ -6,14 +6,14 @@
 
 /*slide*/
 .swiper{width: 100%px; height: 400px; overflow: hidden; position: relative; margin-bottom: 5px;}
-.swiper-wrapper{width: 100%; height: 360px; position:relative;}
-.swiper-slide{width: 100%; height: 360px; display: inline-block; position: relative;}
-.swiper-button-prev{top: 90%; left: 30px;width: 38px; height: 38px; background: url("../images/common/banner_left.png") no-repeat; border: 1px solid #eee; border-right: none;}
-.swiper-button-next{top: 90%; left: 106px; width: 38px; height: 38px; background: url("../images/common/banner_right.png") no-repeat; border: 1px solid #eee; border-left: none; border-right: none;}
-.swiper-pagination{top: 338px; left: 68px; width: 38px; height: 38px; background-color: #fff; border: 1px solid #eee; border-left: none; border-right: none; line-height: 36px; font-size: 12px; padding-left: 3px;}
-.swiper-button-play, .swiper-button-pause{position: absolute; z-index: 10; top: 338px; left: 144px; width: 38px; height: 38px; border: 1px solid #eee; border-left: none; cursor: pointer;}
-.swiper-button-play{background: url("../images/common/playbutton.png") no-repeat;}
-.swiper-button-pause{background: url("../images/common/pausebutton.png") no-repeat; display: none;}
+.swiper .swiper-wrapper{width: 100%; height: 360px; position:relative;}
+.swiper .swiper-slide{width: 100%; height: 360px; display: inline-block; position: relative;}
+.swiper .swiper-button-prev{top: 90%; left: 30px;width: 38px; height: 38px; background: url("../images/common/banner_left.png") no-repeat; border: 1px solid #eee; border-right: none;}
+.swiper .swiper-button-next{top: 90%; left: 106px; width: 38px; height: 38px; background: url("../images/common/banner_right.png") no-repeat; border: 1px solid #eee; border-left: none; border-right: none;}
+.swiper .swiper-pagination{top: 338px; left: 68px; width: 38px; height: 38px; background-color: #fff; border: 1px solid #eee; border-left: none; border-right: none; line-height: 36px; font-size: 12px; padding-left: 3px;}
+.swiper .swiper-button-play, .swiper-button-pause{position: absolute; z-index: 10; top: 338px; left: 144px; width: 38px; height: 38px; border: 1px solid #eee; border-left: none; cursor: pointer;}
+.swiper .swiper-button-play{background: url("../images/common/playbutton.png") no-repeat;}
+.swiper .swiper-button-pause{background: url("../images/common/pausebutton.png") no-repeat; display: none;}
 
 /*slide_img*/
 .slide_img{width: 100%; height: 360px;}
@@ -29,30 +29,9 @@
 
 .swiper .swiper-slide-active .slide_img>img{left: 0px; opacity:1}
 
-
-/*slick 애니메이션*/
-/*
-.slick-active .splitting .char{
-    display: inline-block;
-    animation: slide-up 1s cubic-bezier(.5, 0, .5, 1) both;    
-    animation-delay: calc(60ms * var(--char-index));
-}
-@keyframes slide-up{
-    0%{transform: translateY(30px); opacity: 0;}
-    80%{transform: translateY(30px); opacity: 0;}
-}
-.slick-active .slide_img>img{
-    display: inline-block;
-    animation: slide-up2 0.5s cubic-bezier(.5, 0, .5, 1) both;
-}
-@keyframes slide-up2{
-    0%{transform: translateX(30px); opacity: 0;}
-}
-
-*/
 /*item*/
-.contents{width: 100%; overflow: auto; margin-top: 40px; padding-left: 10px; padding-right: 30px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
-.item_first{width: 49%; float: left; margin-bottom: 60px; padding-left: 20px;}
+.contents{width: 100%; overflow: auto; margin-top: 40px; padding-right: 30px; padding-left: 4px;} /*overflow:auto하면 자동으로 높이잡힘*/ /*화면사이즈 반환해야되나*/
+.item_first{width: 50%; float: left; margin-bottom: 60px; padding-left: 26px;}
 .item_first img{width: 100%; transition: all 0.4s ease-in-out;}
 .item_first img:hover{transform: scale(1.1);}
 .item_first p strong{width: 100%; height: 55px; display: block; font-size: 16px; color: #222; line-height: 25px; margin-top: 15px;}
@@ -66,7 +45,7 @@
 .item p span{display: block; font-weight: normal; color: #222; line-height: 22px;}
 
 /*item2*/
-.item2{width: 25%; float: left; margin-bottom: 60px; padding-left: 20px;}
+.item2{width: 25%; float: left; margin-bottom: 40px; padding-left: 26px;}
 .item2 .b_item{}
 .item2 .b_item img{width: 100%; transition: all 0.4s ease-in-out;}
 .item2 .b_item img:hover{transform: scale(1.1);}
@@ -85,7 +64,7 @@ display: flex; position: relative; top: -35px; padding-top: 10px;}
 .item2 .s_item p.s_txt span{color: #888; font-size: 12px; overflow: hidden; text-overflow: ellipsis;}
 .item2 .more{position: relative; top: -20px; display: block; margin-top: 5px; padding-top: 15px; border-top: 1px solid #ccc; font-size: 13px;}
 .item2 .s_item p.s_txt span.mini_box{display: block; width: 50px; margin-top: 5px; text-align: center; background-color: #A9BCCE; color: #fff;}
-.item_more{width: 100px; height: 40px; text-align: center; line-height: 40px; margin: 0 auto; clear: both; border-radius: 20px; border: 1px solid #222; font-weight: bold; margin-bottom: 50px;}
+.item_more{width: 100px; height: 40px; text-align: center; line-height: 40px; margin: 0 auto; clear: both; border-radius: 20px; border: 1px solid #222; font-weight: bold; margin-bottom: 100px;}
 .item_more a{display: block;}
 
 /*모바일 먼저 만들고 키우면서 작업할꺼면 min-width*/
@@ -93,10 +72,34 @@ display: flex; position: relative; top: -35px; padding-top: 10px;}
 @media screen and (max-width:1300px) {
     .item:nth-child(4n){display: none;}    
 	.item:nth-child(7){display: none;}
-	.item_first{width: 65%;}
-	.item{width: 33%;}	
-	.item2{width: 33%;}
+	.item_first{width: 66.6%;}
+	.item{width: 33.3%;}	
+	.item2{width: 33.3%;}
 	.item2_last{display: none;}	
+}
+
+/*swiper2 글씨부분*/
+.item_slide{padding-right: 30px;}
+.item_slide .select ul{ width: 600px; float: left; margin-left: 10px;}
+.item_slide .select li{display: block; float: left; margin-left: 20px; font-size: 20px; height: 40px; line-height: 40px; margin-bottom: 30px; font-weight: bold; cursor: pointer;}
+.item_slide .select li.selected{color: #00C6FF; border-bottom: 1px solid #00C6FF;}
+.item_slide .more_wrap{float: right;}
+.item_slide .more_wrap span{display: none; margin-top: 5px;}
+.item_slide .more_wrap span.selected{display: block;}
+
+/*swiper2 작동되는부분*/
+.swiper2{clear: both; height: 350px; margin-bottom: 80px;}
+.slide_item{width: 12.5%; padding-left: 26px;}
+.slide_item img{width: 100%;}
+.slide_item .tit{font-size: 16px; margin-top: 10px; margin-bottom: 8px; display: block; font-weight: bold;}
+.slide_item .txt{font-size: 13px; display: block;}
+.swiper2 .swiper-button-prev{top: 90%; left: 30px; width: 38px; height: 38px; background: url("../images/common/banner_left.png") no-repeat; border: 1px solid #eee;}
+.swiper2 .swiper-button-next{top: 90%; left: 68px; width: 38px; height: 38px; background: url("../images/common/banner_right.png") no-repeat; border: 1px solid #eee; border-left: none;}
+
+@media screen and (max-width:1300px) {
+    .slide_item:nth-child(7){display: none;}    
+	.slide_item:nth-child(8){display: none;}	
+	.slide_item{width: 16.6%;}		
 }
 
 /*banner*/
@@ -110,14 +113,21 @@ display: flex; position: relative; top: -35px; padding-top: 10px;}
 .hotdeal .more{width: 140px; font-size: 16px; float: right; margin-top: 30px;}
 .hotdeal .hotdeal_item_wrap{clear: both;}
 
-
-.hotdeal_item{float: left; width: 20%; padding-left: 30px; margin-bottom: 30px;}
+.hotdeal_item{float: left; width: 20%; padding-left: 26px; margin-bottom: 60px;}
 .hotdeal_item img{width: 100%;}
 .hotdeal_item p{height: 140px; margin-top: 20px;}
 .hotdeal_item p strong{display: block; font-size: 20px; margin-bottom: 5px;}
-.hotdeal_item p .coupon{font-size: 12px; display: block; width: 54px; text-align: center; border: 1px solid #A9BCCE; color: #A9BCCE; margin: 5px 0;}
+.hotdeal_item p .coupon{font-size: 12px; display: block; width: 75px; text-align: center; padding: 0 5px; border: 1px solid #A9BCCE; 
+	color: #A9BCCE; margin: 7px 0; clear: both;}
+.hotdeal_item p .jjim, .hotdeal_item p .buy{font-size: 13px; color: #808080; margin-right: 10px; display: inline-block; height: 20px;}
+.hotdeal_item p .jjim{background: url("../images/hotdeal/heart.png") no-repeat left center; padding-left: 23px; cursor: pointer;}
+.hotdeal_item p .jjim:hover{background: url("../images/hotdeal/heart_hover.png") no-repeat left center;}
+.hotdeal_item p .jjim.click{background: url("../images/hotdeal/heart_click.png") no-repeat left center;}
 
 @media screen and (max-width:1300px) {
-    .hotdeal_item:nth-child(6){display: none;}   
+    .hotdeal_item:nth-child(5n){display: none;}       
     .hotdeal_item{width: 25%;}
 }
+
+.hotdeal_more{width: 150px; height: 40px; text-align: center; line-height: 40px; margin: 0 auto; clear: both; border-radius: 20px; border: 1px solid #222; font-weight: bold; margin-bottom: 100px;}
+.hotdeal_more a{display: block;}

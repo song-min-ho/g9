@@ -1,31 +1,45 @@
-$(function(){
-    
-    /* 카테고리 오버*/
-    $(".category a").hover(function(){
-        $(this).children("img").attr("src","images/common/more2.png")
-    }, function(){
-        $(this).children("img").attr("src","images/common/more1.png")
-    })
-    
+$(function(){       
     /*카테고리 클릭*/    
-    $(".category a").click(function(){                  
+    $(".category").toggle(function(){                  
+		$(this).addClass('click')		
+		$('.category a').addClass('click')		
         $('.submenu').animate({"left":"142px"})
-        $('.toggle').show();
-        return false;
-    });
-    $(".toggle").click(function(){        
+        $('.toggle').show();        
+    },function(){        
+		$(this).removeClass('click')		
+		$('.category a').removeClass('click')		
         $('.submenu').animate({"left":"-20px"})
-        $(this).hide();
     });
-    
-    /*슬라이드 화살표 클릭*/    
-    $(".right_button").click(function(){
-        $(".slide_circle div").attr('class', '')
-    })
-    
-    /*텍스트 애니메이션*/
-    Splitting();
-    
+	
+	/*slide_item 텍스트 변경*/
+	$(".item_slide .select li").click(function(){
+		$(".item_slide .select li").removeClass('selected')
+		$(this).addClass('selected')
+	})
+	$(".item_slide .select li:eq(0)").click(function(){
+		$(".item_slide .more_wrap span").removeClass('selected')
+		$(".item_slide .more_wrap span:eq(0)").addClass('selected')		
+	})
+	$(".item_slide .select li:eq(1)").click(function(){
+		$(".item_slide .more_wrap span").removeClass('selected')
+		$(".item_slide .more_wrap span:eq(1)").addClass('selected')		
+	})
+	$(".item_slide .select li:eq(2)").click(function(){
+		$(".item_slide .more_wrap span").removeClass('selected')
+		$(".item_slide .more_wrap span:eq(2)").addClass('selected')		
+	})
+	$(".item_slide .select li:eq(3)").click(function(){
+		$(".item_slide .more_wrap span").removeClass('selected')
+		$(".item_slide .more_wrap span:eq(3)").addClass('selected')		
+	})
+	
+	/*하트 채우기*/
+    $('.jjim').toggle(function(){
+		$(this).addClass('click')
+	},function(){
+		$(this).removeClass('click')
+	})
+     
     /*top button 스크롤*/
     $(window).scroll(function () {
         var height = $(document).scrollTop();

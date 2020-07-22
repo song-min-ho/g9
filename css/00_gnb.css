@@ -4,22 +4,34 @@
 .left_wrap{width: 142px; height: 100%; float: left; position: fixed; border-right: 1px solid #eaeaea; background-color: #fff; z-index: 10000;}
 
 /*logo*/
-.logo{width: 69px; height: 50px; margin-top: 30px; margin-left: 30px;}
+.logo{width: 69px; height: 50px; margin-top: 30px; margin-left: 26px;}
 .logo img{width: 70px;}
 .logo a{display: block;}
 
 /*gnb*/
-.category{width: 142px; height: 30px; line-height: 30px; margin-top: 30px; padding-left: 30px; font-weight: bold; position: relative;}
-.category img{margin-left: 10px;}
-.toggle{width: 142px; height: 30px; position: absolute; top: 0; left: 0px; display: none; cursor: pointer;}
-.gnb{width: 142px; /*overflow: scroll;*/}
-.main_gnb{width: 142px; padding-left: 30px; margin-top: 30px; font-weight: bold; line-height: 33px;}
-.sub_gnb{width: 142px; padding-left: 30px; margin-top: 28px; line-height: 33px; font-weight: normal;}
-.category a:hover{color: #00C6FF; text-decoration: underline;}
+.category{width: 100px; height: 30px; line-height: 30px; margin-top: 30px; padding-left: 26px; font-weight: bold; position: relative; background: url("../images/common/more1.png") no-repeat 85px center; cursor: pointer;}
+.category:hover{background: url("../images/common/more2.png") no-repeat 85px center;}
+.category.click{background: url("../images/common/more2.png") no-repeat 85px center;}
+.category a{display: block; width: 54px; height: 28px; }
+.category:hover a{color: #00C6FF; border-bottom: 1px solid #00C6FF;}
+.category a.click{color: #00C6FF; border-bottom: 1px solid #00C6FF;}
+.gnb{width: 142px; height: 75%; overflow-x: hidden; overflow-y: scroll;}
+.gnb::-webkit-scrollbar {
+width: 7px;
+}
+.gnb::-webkit-scrollbar-thumb {
+background-color: #DEDEDE;
+border-radius: 10px;
+}
+.gnb::-webkit-scrollbar-track {
+background-color: #fff;
+}
+.main_gnb{width: 142px; padding-left: 26px; margin-top: 30px; font-weight: bold; line-height: 33px;}
+.sub_gnb{width: 142px; padding-left: 26px; margin-top: 28px; line-height: 33px; font-weight: normal;}
 .gnb li a:hover{color: #00C6FF; text-decoration: underline;}
 .sub_gnb li a:hover{color: #00C6FF; text-decoration: underline;}
 
 /*submenu*/
-.submenu{width: 160px; height: 100%; line-height: 40px; padding-left: 20px; padding-top: 150px; 
+.submenu{width: 160px; height: 100%; line-height: 32px; padding-left: 20px; padding-top: 110px; font-size: 13px;
     position: absolute; left: -20px; background-color: #fff; z-index: 9999; border-right: 1px solid #eaeaea; position: fixed;}
-.submenu a:hover{color: #3bded4; text-decoration: underline;}
+.submenu a:hover{color: #00c6ff; text-decoration: underline;}
